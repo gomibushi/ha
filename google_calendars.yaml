@@ -1,0 +1,133 @@
+
+- cal_id: sa6tdhu05oceh4hhsfedkt3lhg@group.calendar.google.com
+  entities:
+  - device_id: visma_asp
+    ignore_availability: true
+    name: Visma ASP
+    track: true
+
+- cal_id: jsune12lph5n8a21uamqelbaak@group.calendar.google.com
+  entities:
+  - device_id: homeassistant
+    ignore_availability: true
+    name: HomeAssistant
+    track: true
+
+- cal_id: 09cj6a8ldugsg4ch67kflee9n4@group.calendar.google.com
+  entities:
+  - device_id: skole_og_barnehagekalender_trondheim_kommune
+    ignore_availability: true
+    name: Skole- og barnehagekalender Trondheim kommune
+    track: true
+
+- cal_id: pal.rotnes@visma.com
+  entities:
+  - device_id: pal_rotnes_visma_com
+    ignore_availability: true
+    name: pal.rotnes@visma.com
+    track: true
+
+- cal_id: dvsq1bbktrjv91mpv4csbt7mf8@group.calendar.google.com
+  entities:
+  - device_id: jobbing
+    ignore_availability: true
+    name: Jobbing
+    track: true
+
+- cal_id: ef48tdtl2ftg52clk18ndr4hhg@group.calendar.google.com
+  entities:
+  - device_id: pal_uviktig
+    ignore_availability: true
+    name: "P\xE5l uviktig"
+    track: true
+
+- cal_id: gomibushi@gmail.com
+  entities:
+  - device_id: pal_viktig
+    ignore_availability: true
+    name: "P\xE5l Viktig"
+    track: true
+
+- cal_id: h04af1e3g20kir173afm73qkac@group.calendar.google.com
+  entities:
+  - device_id: jannickepal
+    ignore_availability: true
+    name: "JannickeP\xE5l"
+    track: true
+
+- cal_id: 4phlpfe8pohp49u6766l1jqofg@group.calendar.google.com
+  entities:
+  - device_id: visma
+    ignore_availability: true
+    name: Visma
+    track: true
+
+- cal_id: 9bub2qho9k53mb4dqbq4o56kfh01m3nr@import.calendar.google.com
+  entities:
+  - device_id: http_showrss_info_user_schedule_8988_cal_future_true
+    ignore_availability: true
+    name: http://showrss.info/user/schedule/8988.cal?future=true
+    track: true
+
+- cal_id: family05883059983508088089@group.calendar.google.com
+  entities:
+  - device_id: family
+    ignore_availability: true
+    name: Family
+    track: true
+
+- cal_id: jannickehelen@gmail.com
+  entities:
+  - device_id: jannicke_helen_olsen_rotnes
+    ignore_availability: true
+    name: "Jannicke Helen Olsen R\xF8tnes"
+    track: true
+
+- cal_id: m68udivgt004u44corkseat6vc@group.calendar.google.com
+  entities:
+  - device_id: besok_reise
+    ignore_availability: true
+    name: "Bes\xF8k/Reise"
+    track: true
+
+- cal_id: addressbook#contacts@group.v.calendar.google.com
+  entities:
+  - device_id: contacts
+    ignore_availability: true
+    name: Contacts
+    track: true
+
+- cal_id: jo41v8m40rfgs434fnvsobl5ug@group.calendar.google.com
+  entities:
+  - device_id: logg
+    ignore_availability: true
+    name: Logg
+    track: true
+
+- cal_id: en-gb.lithuanian#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: holidays_in_lithuania
+    ignore_availability: true
+    name: Holidays in Lithuania
+    track: true
+
+- cal_id: en.norwegian#holiday@group.v.calendar.google.com
+  entities:
+  - device_id: holidays_in_norway
+    ignore_availability: true
+    name: Holidays in Norway
+    track: true
+
+- cal_id: ht3jlfaac5lfd6263ulfh4tql8@group.calendar.google.com
+  entities:
+  - device_id: phases_of_the_moon
+    ignore_availability: true
+    name: Phases of the Moon
+    track: true
+
+- cal_id: p#weeknum@group.v.calendar.google.com
+  entities:
+  - device_id: week_numbers
+    ignore_availability: true
+    name: Week Numbers
+    track: true

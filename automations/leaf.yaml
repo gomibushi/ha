@@ -1,0 +1,10 @@
+- alias: Start Leaf Climate Control
+  initial_state: true
+  trigger:
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: leafheat
+  action:
+    service: switch.turn_on
+    entity_id: switch.leafen_climate_control

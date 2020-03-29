@@ -1,0 +1,14 @@
+- alias: Calendar notification - Sends Description as message
+  trigger:
+    platform: state
+    entity_id: calendar.homeassistant
+    to: 'on'
+  condition:
+  - condition: template
+    value_template: '{{states.calendar.HomeAssistant.attributes.message == ''NOTIFY''
+      }}'
+  action:
+  - service: notify.mobile_app_pal_s_iphone_11
+    data_template:
+      title: Calendar notification
+      message: '{{states.calendar.homeassistant.attributes.description}}'

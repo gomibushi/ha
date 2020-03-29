@@ -1,0 +1,35 @@
+- alias: William slår på PCen
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.williamspc
+    to: 'on'
+  action:
+  - service: notify.mobile_app_pal_s_iphone_11
+    data_template:
+      title: William PC
+      message: William slo på PCen. Den har vært på i {{ states('sensor.williams_pc_pa_i_dag')
+        }} timer i dag.
+  - service: notify.mobile_app_jannicke_sin_iphone
+    data_template:
+      title: William PC
+      message: William slo på PCen. Den har vært på i {{ states('sensor.williams_pc_pa_i_dag')
+        }} timer i dag.
+
+- alias: William slår av PCen
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.williamspc
+    to: 'off'
+  action:
+  - service: notify.mobile_app_pal_s_iphone_11
+    data_template:
+      title: William's PC av
+      message: William slo av PCen. Den har vært på i {{ states('sensor.williams_pc_pa_i_dag')
+        }} timer i dag.
+  - service: notify.mobile_app_jannicke_sin_iphone
+    data_template:
+      title: William's PC av
+      message: William slo av PCen. Den har vært på i {{ states('sensor.williams_pc_pa_i_dag')
+        }} timer i dag.

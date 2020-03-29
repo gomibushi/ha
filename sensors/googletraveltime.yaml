@@ -1,0 +1,12 @@
+  # Travel time from google
+  #- platform: google_travel_time
+  #  name: GoogleWorktoHome
+  #  api_key: !secret googleapikey
+  #  origin: !secret homelonglat
+  #  destination: !secret worklonglat
+  # Travel time from google
+  #- platform: google_travel_time
+  #  name: HometoWork
+  #  api_key: !secret googleapikey
+  #  origin: Lyngvegen 13, 7088 Heimdal
+  #  destination: Strindfjordvegen 1, 7053 Ranheim

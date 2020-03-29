@@ -1,0 +1,48 @@
+- alias: Pål Drar fra jobb
+  trigger:
+  - platform: state
+    entity_id: person.pal
+    from: Jobb
+  condition:
+    condition: time
+    after: '14:00:00'
+    before: '22:00:00'
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+  - data_template:
+      title: Kjør forsiktig.
+      message: Turen hjem antas å ta ca {{(states('sensor.WazeWorkToHomeTravelTime'))|int+6}}
+        minutter.
+    service: notify.mobile_app_pal_s_iphone_11
+  - data_template:
+      title: Pål har nettopp dratt fra jobb.
+      message: Det antas at han er hjemme om ca {{(states('sensor.WazeWorkToHomeTravelTime'))|int+6}}
+        minutter.
+    service: notify.mobile_app_jannicke_sin_iphone
+
+- alias: Pål Snart hjemme
+  trigger:
+  - platform: state
+    entity_id: person.pal
+    to: SnartHjemme
+  condition:
+    condition: time
+    after: '14:00:00'
+    before: '22:00:00'
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  action:
+  - data_template:
+      title: Sluppen passeres!
+      message: Turen hjem antas å ta ca {{(states('sensor.WazeSluppenToHomeTravelTime'))|int+0}}
+        minutter.
+    service: notify.mobile_app_pal_s_iphone_11

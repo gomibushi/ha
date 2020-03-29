@@ -1,0 +1,11 @@
+- alias: Serveren går offline
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.server
+    to: 'off'
+  action:
+  - service: notify.mobile_app_pal_s_iphone_11
+    data:
+      title: ALARM! ALARM!
+      message: Serveren er nede!

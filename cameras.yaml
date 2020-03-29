@@ -1,0 +1,12 @@
+  - platform: mjpeg
+    name: Coop Camera
+    mjpeg_url: http://192.168.10.121/video/mjpg.cgi
+    still_image_url: http://192.168.10.121/image.jpg
+    username: !secret dlinkuser
+    password: !secret dlinkpw
+  - platform: mjpeg
+    name: Front Door Camera
+    mjpeg_url: http://192.168.10.120/video/mjpg.cgi
+    still_image_url: http://192.168.10.120/image.jpg
+    username: !secret dlinkuser
+    password: !secret dlinkpw

@@ -1,0 +1,14 @@
+  # TIME
+  - platform: time_date
+    display_options:
+      - time
+      
+  # Weather prediction
+  - platform: yr
+
+  # Qbittorrent monitor
+  - platform: qbittorrent
+    url: http://box.rotnes.org:9090
+    username: !secret qbittorrent_user
+    password: !secret qbittorrent_pw
+  

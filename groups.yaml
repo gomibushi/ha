@@ -1,0 +1,6 @@
+stuetaklys:
+  name: Taklys stue
+  entities:
+    - light.taklys_1
+    - light.taklys_2
+    - light.taklys_3

@@ -1,0 +1,17 @@
+  - platform: waze_travel_time
+    name: WazeHomeToWorkTravelTime
+    origin: !secret homelonglat
+    destination: !secret worklonglat
+    region: 'EU'
+
+  - platform: waze_travel_time
+    name: WazeWorkToHomeTravelTime
+    origin: !secret worklonglat
+    destination: !secret homelonglat
+    region: 'EU'
+
+  - platform: waze_travel_time
+    name: WazeSluppenToHomeTravelTime
+    origin: !secret sluppenlonglat
+    destination: !secret homelonglat
+    region: 'EU'

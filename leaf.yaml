@@ -1,0 +1,9 @@
+  username: !secret nissanleaf_user
+  password: !secret nissanleaf_pw 
+  region: NE
+  update_interval:
+    hours: 1
+  update_interval_charging:
+    minutes: 15
+  update_interval_climate:
+    minutes: 5

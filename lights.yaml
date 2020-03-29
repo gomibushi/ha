@@ -1,0 +1,6 @@
+  - platform: group
+    name: Taklys gruppe stue
+    entities:
+      - light.taklys_1
+      - light.taklys_2
+      - light.taklys_3

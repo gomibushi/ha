@@ -1,0 +1,39 @@
+- name: Jobb
+  latitude: !secret zone_work_lat
+  longitude: !secret zone_work_long
+  radius: 150
+
+- name: SnartHjemme
+  latitude: !secret zone_snarthjemme_lat
+  longitude: !secret zone_snarthjemme_long
+  radius: 250
+  
+- name: Mikis
+  latitude: !secret zone_mikis_lat
+  longitude: !secret zone_mikis_long
+  radius: 100
+  icon: mdi:map-marker-check
+
+- name: Nidaros
+  latitude: !secret zone_nidaros_lat
+  longitude: !secret zone_nidaros_long
+  radius: 150
+  icon: mdi:school
+
+- name: Stabbursmoen
+  latitude: !secret zone_stabbursmoen_lat
+  longitude: !secret zone_stabbursmoen_long
+  radius: 150
+  icon: mdi:school
+
+- name: Midtbyen
+  latitude: !secret zone_midtbyen_lat
+  longitude: !secret zone_midtbyen_long
+  radius: 1000
+  icon: mdi:city
+
+- name: Tiller
+  latitude: !secret zone_tiller_lat
+  longitude: !secret zone_tiller_long
+  radius: 500
+  icon: mdi:shopping

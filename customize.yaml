@@ -1,0 +1,8 @@
+person.pal:
+  entity_picture: /local/pal.jpg
+person.jannicke:
+  entity_picture: /local/jannicke.jpg
+person.william:
+  entity_picture: /local/william.jpg
+light.litenlampekommodegang:
+  friendly_name: LitenLampeKommode

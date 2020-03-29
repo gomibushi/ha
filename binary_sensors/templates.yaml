@@ -1,0 +1,21 @@
+  - platform: template
+    sensors:
+      vannlekkasjekjokken:
+        friendly_name: 'Vannlekkasje på kjøkkenet'
+        value_template: >- 
+          {%- if states("sensor.vannsensor_kjokken_flood") | int == 2 -%}
+          true
+          {%- else -%}
+          false
+          {%- endif -%}
+
+  - platform: template
+    sensors:
+      roykvarslergang2etg:
+        friendly_name: 'Røykvarsler gang 2. etg'
+        value_template: >- 
+          {%- if states("sensor.roykvarsler_2etggang_smoke") | int == 3 -%}
+          true
+          {%- else -%}
+          false
+          {%- endif -%}
