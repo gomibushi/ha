@@ -1,14 +1,30 @@
 - id: '1582840120102'
   name: Dagmodus
   entities:
-    light.gammel_lampe:
-      brightness: 204
-      friendly_name: Gammel lampe
+    cover.rullegardintvstue:
+      current_position: 75
+      friendly_name: RullegardinTVStue
+      model: FYRTUR block-out roller blind
+      state: open
+      supported_features: 15
+    light.gammellampe:
+      brightness: 165
+      friendly_name: GammelLampe
       state: 'on'
       supported_features: 33
     light.litenlampekommodegang:
       brightness: 132
-      friendly_name: LitenLampeKommodeGang
+      friendly_name: LitenLampeHylle
+      state: 'on'
+      supported_features: 33
+    light.lys_skap_spisebord:
+      brightness: 223
+      friendly_name: lys_skap_spisebord
+      state: 'on'
+      supported_features: 33
+    light.lysskaptvstue:
+      brightness: 114
+      friendly_name: LysSkapTVStue
       state: 'on'
       supported_features: 33
     light.taklys_1:
@@ -36,220 +52,590 @@
       state: 'on'
       supported_features: 35
     light.unknown_id_0438_unknown_type_0202_id_0002_level:
-      brightness: 245
-      friendly_name: light_2ndfloor_hall Level
+      brightness: 129
+      friendly_name: light_2ndfloor_room
       node_id: 10
-      power_consumption: 0
+      power_consumption: 27.18
       state: 'on'
-      supported_features: 1
+      supported_features: 33
       value_id: '72057594210516993'
       value_index: 0
       value_instance: 1
     light.unknown_id_0438_unknown_type_0202_id_0002_level_2:
-      brightness: 224
-      friendly_name: light_2ndfloor_ceiling Level
+      brightness: 229
+      friendly_name: light_2ndfloor_hallway Level
       node_id: 11
       power_consumption: 0
       state: 'on'
-      supported_features: 1
+      supported_features: 33
       value_id: '72057594227294209'
       value_index: 0
       value_instance: 1
-    switch.lys_over_spisebordet:
-      friendly_name: Lys over spisebordet
+    light.unknown_id_0438_unknown_type_0202_id_0002_level_3:
+      brightness: 62
+      friendly_name: LysTrapp
+      node_id: 12
+      state: 'on'
+      supported_features: 33
+      value_id: '72057594244071425'
+      value_index: 0
+      value_instance: 1
+    switch.fancylampestue:
+      friendly_name: FancyLampeStue
+      state: 'on'
+    switch.lamperpeis:
+      friendly_name: LamperPeis
+      state: 'on'
+    switch.litenfancylampe:
+      friendly_name: LitenFancyLampe
+      restored: true
+      state: unavailable
+      supported_features: 0
+    switch.lys_spisebord:
+      friendly_name: lys_spisebord
       state: 'on'
     switch.stua_fancy_lampe:
-      friendly_name: Stua Fancy lampe
+      friendly_name: tvStua Fancy lampe
       state: 'on'
     zwave.unknown_id_0438_unknown_type_0202_id_0002:
       application_version: '1.08'
-      averageRequestRTT: 34
-      averageResponseRTT: 49
+      averageRequestRTT: 335
+      averageResponseRTT: 502
       capabilities:
-      - listening
-      - routing
       - beaming
       - zwave_plus
-      friendly_name: light_2ndfloor_hall
+      - routing
+      - listening
+      friendly_name: light_2ndfloor_room
       is_awake: true
       is_failed: false
       is_info_received: true
       is_ready: true
       is_zwave_plus: true
-      lastRequestRTT: 37
-      lastResponseRTT: 52
+      lastRequestRTT: 417
+      lastResponseRTT: 534
       manufacturer_name: 'Unknown: id=0438'
       max_baud_rate: 40000
       neighbors:
+      - 8
       - 1
       - 11
+      - 12
       node_id: 10
       node_name: 'Unknown: id=0438 Unknown: type=0202, id=0002'
       product_name: 'Unknown: type=0202, id=0002'
       query_stage: Complete
-      receivedCnt: 39
-      receivedDups: 3
-      receivedTS: '2020-03-27 17:56:28:149 '
-      receivedUnsolicited: 9
+      receivedCnt: 25
+      receivedDups: 2
+      receivedTS: '2020-08-19 14:19:40:915 '
+      receivedUnsolicited: 13
       retries: 0
-      sentCnt: 46
+      sentCnt: 19
       sentFailed: 0
-      sentTS: '2020-03-27 17:56:28:097 '
+      sentTS: '2020-08-19 14:19:38:971 '
       state: ready
     zwave.unknown_id_0438_unknown_type_0202_id_0002_2:
       application_version: '1.08'
-      averageRequestRTT: 31
-      averageResponseRTT: 52
+      averageRequestRTT: 120
+      averageResponseRTT: 168
       capabilities:
-      - listening
-      - routing
       - beaming
       - zwave_plus
-      friendly_name: light_2ndfloor_ceiling
+      - routing
+      - listening
+      friendly_name: light_2ndfloor_hallway
       is_awake: true
       is_failed: false
       is_info_received: true
       is_ready: true
       is_zwave_plus: true
-      lastRequestRTT: 30
-      lastResponseRTT: 59
+      lastRequestRTT: 145
+      lastResponseRTT: 228
       manufacturer_name: 'Unknown: id=0438'
       max_baud_rate: 40000
       neighbors:
+      - 8
+      - 9
       - 10
       node_id: 11
       node_name: 'Unknown: id=0438 Unknown: type=0202, id=0002'
       product_name: 'Unknown: type=0202, id=0002'
       query_stage: Complete
-      receivedCnt: 36
-      receivedDups: 3
-      receivedTS: '2020-03-27 17:57:42:296 '
-      receivedUnsolicited: 8
+      receivedCnt: 20
+      receivedDups: 10
+      receivedTS: '2020-08-19 14:19:41:309 '
+      receivedUnsolicited: 4
       retries: 0
-      sentCnt: 44
+      sentCnt: 23
       sentFailed: 0
-      sentTS: '2020-03-27 17:57:42:231 '
+      sentTS: '2020-08-19 14:19:40:794 '
+      state: ready
+    zwave.unknown_id_0438_unknown_type_0202_id_0002_3:
+      application_version: '1.08'
+      averageRequestRTT: 121
+      averageResponseRTT: 121
+      capabilities:
+      - beaming
+      - zwave_plus
+      - routing
+      - listening
+      friendly_name: LysTrapp
+      is_awake: true
+      is_failed: false
+      is_info_received: true
+      is_ready: true
+      is_zwave_plus: true
+      lastRequestRTT: 31
+      lastResponseRTT: 45
+      manufacturer_name: 'Unknown: id=0438'
+      max_baud_rate: 40000
+      neighbors:
+      - 8
+      - 9
+      - 10
+      node_id: 12
+      node_name: 'Unknown: id=0438 Unknown: type=0202, id=0002'
+      product_name: 'Unknown: type=0202, id=0002'
+      query_stage: Complete
+      receivedCnt: 13
+      receivedDups: 3
+      receivedTS: '2020-08-19 14:19:39:979 '
+      receivedUnsolicited: 3
+      retries: 0
+      sentCnt: 16
+      sentFailed: 0
+      sentTS: '2020-08-19 14:19:39:912 '
       state: ready
 - id: '1582840260603'
   name: Nattmodus
   entities:
-    light.gammel_lampe:
-      friendly_name: Gammel lampe
-      state: 'off'
+    cover.rullegardintvstue:
+      current_position: 18
+      model: FYRTUR block-out roller blind
+      friendly_name: RullegardinTVStue
+      supported_features: 15
+      state: open
+    light.gammellampe:
+      friendly_name: GammelLampe
       supported_features: 33
+      state: 'off'
     light.litenlampekommodegang:
-      friendly_name: LitenLampeKommodeGang
-      state: 'off'
+      brightness: 37
+      friendly_name: LitenLampeHylle
       supported_features: 33
-    light.taklys_1:
-      friendly_name: Taklys 1
-      max_mireds: 454
-      min_mireds: 250
-      state: 'off'
-      supported_features: 35
-    light.taklys_2:
-      friendly_name: Taklys 2
-      max_mireds: 454
-      min_mireds: 250
-      state: 'off'
-      supported_features: 35
-    light.taklys_3:
-      friendly_name: Taklys 3
-      max_mireds: 454
-      min_mireds: 250
-      state: 'off'
-      supported_features: 35
-    light.unknown_id_0438_unknown_type_0202_id_0002_level:
-      brightness: 28
-      friendly_name: light_2ndfloor_hall Level
-      node_id: 10
-      power_consumption: 0
       state: 'on'
-      supported_features: 1
-      value_id: '72057594210516993'
-      value_index: 0
-      value_instance: 1
-    light.unknown_id_0438_unknown_type_0202_id_0002_level_2:
-      friendly_name: light_2ndfloor_ceiling Level
-      node_id: 11
-      power_consumption: 0
+    light.lys_skap_spisebord:
+      friendly_name: lys_skap_spisebord
+      supported_features: 33
       state: 'off'
-      supported_features: 1
-      value_id: '72057594227294209'
+    light.taklys_1:
+      min_mireds: 250
+      max_mireds: 454
+      friendly_name: Taklys 1
+      supported_features: 35
+      state: 'off'
+    light.taklys_2:
+      min_mireds: 250
+      max_mireds: 454
+      friendly_name: Taklys 2
+      supported_features: 35
+      state: 'off'
+    light.taklys_3:
+      min_mireds: 250
+      max_mireds: 454
+      friendly_name: Taklys 3
+      supported_features: 35
+      state: 'off'
+    light.unknown_id_0438_unknown_type_0202_id_0002_level:
+      node_id: 10
       value_index: 0
       value_instance: 1
-    switch.lys_over_spisebordet:
-      friendly_name: Lys over spisebordet
+      value_id: '72057594210516993'
+      power_consumption: 0
+      friendly_name: light_2ndfloor_room
+      supported_features: 33
+      state: 'off'
+    light.unknown_id_0438_unknown_type_0202_id_0002_level_2:
+      brightness: 5
+      node_id: 11
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594227294209'
+      power_consumption: 0
+      friendly_name: light_2ndfloor_hallway Level
+      supported_features: 33
+      state: 'on'
+    light.unknown_id_0438_unknown_type_0202_id_0002_level_3:
+      brightness: 82
+      node_id: 12
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594244071425'
+      friendly_name: LysTrapp
+      supported_features: 33
+      state: 'on'
+    switch.fancylampestue:
+      friendly_name: FancyLampeStue
+      state: 'off'
+    switch.lamperpeis:
+      friendly_name: LamperPeis
+      state: 'off'
+    switch.litenfancylampe:
+      restored: true
+      supported_features: 0
+      friendly_name: LitenFancyLampe
+      state: unavailable
+    switch.lys_spisebord:
+      friendly_name: lys_spisebord
       state: 'off'
     switch.stua_fancy_lampe:
-      friendly_name: Stua Fancy lampe
+      friendly_name: tvStua Fancy lampe
       state: 'off'
     zwave.unknown_id_0438_unknown_type_0202_id_0002:
-      application_version: '1.08'
-      averageRequestRTT: 38
-      averageResponseRTT: 68
-      capabilities:
-      - listening
-      - routing
-      - beaming
-      - zwave_plus
-      friendly_name: light_2ndfloor_hall
-      is_awake: true
-      is_failed: false
-      is_info_received: true
-      is_ready: true
-      is_zwave_plus: true
-      lastRequestRTT: 35
-      lastResponseRTT: 53
-      manufacturer_name: 'Unknown: id=0438'
-      max_baud_rate: 40000
-      neighbors:
-      - 1
-      - 11
       node_id: 10
       node_name: 'Unknown: id=0438 Unknown: type=0202, id=0002'
+      manufacturer_name: 'Unknown: id=0438'
       product_name: 'Unknown: type=0202, id=0002'
       query_stage: Complete
-      receivedCnt: 134
-      receivedDups: 29
-      receivedTS: '2020-03-27 23:48:18:159 '
-      receivedUnsolicited: 87
-      retries: 1
-      sentCnt: 67
-      sentFailed: 0
-      sentTS: '2020-03-27 23:48:18:075 '
-      state: ready
-    zwave.unknown_id_0438_unknown_type_0202_id_0002_2:
-      application_version: '1.08'
-      averageRequestRTT: 86
-      averageResponseRTT: 45
-      capabilities:
-      - listening
-      - routing
-      - beaming
-      - zwave_plus
-      friendly_name: light_2ndfloor_ceiling
       is_awake: true
+      is_ready: true
       is_failed: false
       is_info_received: true
-      is_ready: true
-      is_zwave_plus: true
-      lastRequestRTT: 33
-      lastResponseRTT: 46
-      manufacturer_name: 'Unknown: id=0438'
       max_baud_rate: 40000
+      is_zwave_plus: true
+      capabilities:
+      - zwave_plus
+      - beaming
+      - listening
+      - routing
       neighbors:
-      - 10
+      - 1
+      - 8
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      sentCnt: 43
+      sentFailed: 0
+      retries: 0
+      receivedCnt: 50
+      receivedDups: 6
+      receivedUnsolicited: 22
+      sentTS: '2020-09-23 23:11:46:757 '
+      receivedTS: '2020-09-23 23:11:46:797 '
+      lastRequestRTT: 28
+      averageRequestRTT: 48
+      lastResponseRTT: 40
+      averageResponseRTT: 63
+      application_version: '1.08'
+      friendly_name: light_2ndfloor_room
+      state: ready
+    zwave.unknown_id_0438_unknown_type_0202_id_0002_2:
       node_id: 11
       node_name: 'Unknown: id=0438 Unknown: type=0202, id=0002'
+      manufacturer_name: 'Unknown: id=0438'
       product_name: 'Unknown: type=0202, id=0002'
       query_stage: Complete
-      receivedCnt: 63
-      receivedDups: 6
-      receivedTS: '2020-03-27 23:46:42:299 '
-      receivedUnsolicited: 30
-      retries: 0
-      sentCnt: 52
-      sentFailed: 0
-      sentTS: '2020-03-27 23:46:25:057 '
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: true
+      capabilities:
+      - zwave_plus
+      - beaming
+      - listening
+      - routing
+      neighbors:
+      - 1
+      - 8
+      - 9
+      - 10
+      - 12
+      - 14
+      - 15
+      - 16
+      sentCnt: 40
+      sentFailed: 1
+      retries: 2
+      receivedCnt: 32
+      receivedDups: 7
+      receivedUnsolicited: 11
+      sentTS: '2020-09-23 23:11:44:154 '
+      receivedTS: '2020-09-23 23:11:44:227 '
+      lastRequestRTT: 31
+      averageRequestRTT: 30
+      lastResponseRTT: 45
+      averageResponseRTT: 45
+      application_version: '1.08'
+      friendly_name: light_2ndfloor_hallway
       state: ready
+    zwave.unknown_id_0438_unknown_type_0202_id_0002_3:
+      node_id: 12
+      node_name: 'Unknown: id=0438 Unknown: type=0202, id=0002'
+      manufacturer_name: 'Unknown: id=0438'
+      product_name: 'Unknown: type=0202, id=0002'
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: true
+      capabilities:
+      - zwave_plus
+      - beaming
+      - listening
+      - routing
+      neighbors:
+      - 8
+      - 9
+      - 10
+      - 11
+      - 16
+      sentCnt: 31
+      sentFailed: 0
+      retries: 3
+      receivedCnt: 38
+      receivedDups: 7
+      receivedUnsolicited: 12
+      sentTS: '2020-09-23 23:11:44:271 '
+      receivedTS: '2020-09-23 23:11:46:917 '
+      lastRequestRTT: 1863
+      averageRequestRTT: 1136
+      lastResponseRTT: 2369
+      averageResponseRTT: 1729
+      application_version: '1.08'
+      friendly_name: LysTrapp
+      state: ready
+  icon: mdi:moon
+- id: '1588531391270'
+  name: TV-modus
+  entities:
+    light.unknown_id_0438_unknown_type_0202_id_0002_level:
+      brightness: 23
+      node_id: 10
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594210516993'
+      power_consumption: 2.9
+      friendly_name: light_2ndfloor_room
+      supported_features: 33
+      state: 'on'
+    light.unknown_id_0438_unknown_type_0202_id_0002_level_2:
+      brightness: 106
+      node_id: 11
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594227294209'
+      power_consumption: 0
+      friendly_name: light_2ndfloor_hallway Level
+      supported_features: 33
+      state: 'on'
+    light.unknown_id_0438_unknown_type_0202_id_0002_level_3:
+      brightness: 129
+      node_id: 12
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594244071425'
+      friendly_name: LysTrapp
+      supported_features: 33
+      state: 'on'
+    switch.stua_fancy_lampe:
+      friendly_name: tvStua Fancy lampe
+      state: 'off'
+    zwave.unknown_id_0438_unknown_type_0202_id_0002:
+      node_id: 10
+      node_name: 'Unknown: id=0438 Unknown: type=0202, id=0002'
+      manufacturer_name: 'Unknown: id=0438'
+      product_name: 'Unknown: type=0202, id=0002'
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: true
+      capabilities:
+      - zwave_plus
+      - beaming
+      - listening
+      - routing
+      neighbors:
+      - 1
+      - 8
+      - 11
+      - 12
+      - 13
+      - 14
+      - 15
+      - 16
+      sentCnt: 35
+      sentFailed: 0
+      retries: 0
+      receivedCnt: 38
+      receivedDups: 2
+      receivedUnsolicited: 17
+      sentTS: '2020-09-23 23:10:37:998 '
+      receivedTS: '2020-09-23 23:10:40:193 '
+      lastRequestRTT: 32
+      averageRequestRTT: 33
+      lastResponseRTT: 46
+      averageResponseRTT: 45
+      application_version: '1.08'
+      friendly_name: light_2ndfloor_room
+      state: ready
+    zwave.unknown_id_0438_unknown_type_0202_id_0002_2:
+      node_id: 11
+      node_name: 'Unknown: id=0438 Unknown: type=0202, id=0002'
+      manufacturer_name: 'Unknown: id=0438'
+      product_name: 'Unknown: type=0202, id=0002'
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: true
+      capabilities:
+      - zwave_plus
+      - beaming
+      - listening
+      - routing
+      neighbors:
+      - 1
+      - 8
+      - 9
+      - 10
+      - 12
+      - 14
+      - 15
+      - 16
+      sentCnt: 33
+      sentFailed: 1
+      retries: 1
+      receivedCnt: 26
+      receivedDups: 6
+      receivedUnsolicited: 8
+      sentTS: '2020-09-23 23:10:49:897 '
+      receivedTS: '2020-09-23 23:10:49:964 '
+      lastRequestRTT: 31
+      averageRequestRTT: 31
+      lastResponseRTT: 45
+      averageResponseRTT: 45
+      application_version: '1.08'
+      friendly_name: light_2ndfloor_hallway
+      state: ready
+    zwave.unknown_id_0438_unknown_type_0202_id_0002_3:
+      node_id: 12
+      node_name: 'Unknown: id=0438 Unknown: type=0202, id=0002'
+      manufacturer_name: 'Unknown: id=0438'
+      product_name: 'Unknown: type=0202, id=0002'
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: true
+      capabilities:
+      - zwave_plus
+      - beaming
+      - listening
+      - routing
+      neighbors:
+      - 8
+      - 9
+      - 10
+      - 11
+      - 16
+      sentCnt: 25
+      sentFailed: 0
+      retries: 3
+      receivedCnt: 26
+      receivedDups: 5
+      receivedUnsolicited: 7
+      sentTS: '2020-09-23 23:10:59:636 '
+      receivedTS: '2020-09-23 23:11:03:575 '
+      lastRequestRTT: 3576
+      averageRequestRTT: 2185
+      lastResponseRTT: 3796
+      averageResponseRTT: 2462
+      application_version: '1.08'
+      friendly_name: LysTrapp
+      state: ready
+  icon: mdi:tv
+- id: '1598935983039'
+  name: Morgen
+  entities:
+    light.taklys_1:
+      min_mireds: 250
+      max_mireds: 454
+      friendly_name: Taklys 1
+      supported_features: 35
+      state: 'off'
+    light.unknown_id_0438_unknown_type_0202_id_0002_level_2:
+      brightness: 15
+      node_id: 11
+      value_index: 0
+      value_instance: 1
+      value_id: '72057594227294209'
+      power_consumption: 22.85
+      friendly_name: light_2ndfloor_hallway Level
+      supported_features: 33
+      state: 'on'
+    switch.fancylampestue:
+      friendly_name: FancyLampeStue
+      state: 'on'
+    switch.stua_fancy_lampe:
+      friendly_name: tvStua Fancy lampe
+      state: 'on'
+    zwave.unknown_id_0438_unknown_type_0202_id_0002_2:
+      node_id: 11
+      node_name: 'Unknown: id=0438 Unknown: type=0202, id=0002'
+      manufacturer_name: 'Unknown: id=0438'
+      product_name: 'Unknown: type=0202, id=0002'
+      query_stage: Complete
+      is_awake: true
+      is_ready: true
+      is_failed: false
+      is_info_received: true
+      max_baud_rate: 40000
+      is_zwave_plus: true
+      capabilities:
+      - routing
+      - zwave_plus
+      - listening
+      - beaming
+      neighbors:
+      - 1
+      - 8
+      - 9
+      - 10
+      - 12
+      - 14
+      - 15
+      - 16
+      sentCnt: 30
+      sentFailed: 0
+      retries: 1
+      receivedCnt: 24
+      receivedDups: 4
+      receivedUnsolicited: 7
+      sentTS: '2020-10-29 07:32:15:489 '
+      receivedTS: '2020-10-29 07:32:15:555 '
+      lastRequestRTT: 31
+      averageRequestRTT: 33
+      lastResponseRTT: 45
+      averageResponseRTT: 45
+      application_version: '1.08'
+      friendly_name: light_2ndfloor_hallway
+      state: ready
+    light.gammellampe:
+      brightness: 165
+      friendly_name: GammelLampe
+      supported_features: 33
+      state: 'on'

@@ -1,17 +1,9 @@
-#weekday_morning:
-#  sequence:
-#  - service: notify.mobile_app_pal_s_iphone_11
-#    message: 'God morgen!'
-#  - service: light.turn_on
-#    entity_id: light.taklys_1
-
 leafen_update:
   alias: Leaf Status Update
   sequence:
     service: nissan_leaf.update
     data:
-      vin: !secret nissanleaf_vin
-
+      vin: SJNFAAZE0U6036233
 turn_off_lights_1floor:
   sequence:
   - service: light.turn_off
@@ -25,14 +17,13 @@ turn_off_lights_1floor:
       entity_id: light.taklys_3
   - service: light.turn_off
     data:
-      entity_id: light.stuegammellampe #gammel lampe
+      entity_id: light.stuegammellampe
   - service: switch.turn_off
     data:
       entity_id: switch.stua_fancy_lampe
   - service: switch.turn_off
     data:
       entity_id: switch.lys_over_spisebordet
-
 turn_on_lights_1floor:
   sequence:
   - service: light.turn_on
@@ -46,10 +37,37 @@ turn_on_lights_1floor:
       entity_id: light.taklys_3
   - service: light.turn_on
     data:
-      entity_id: light.stuegammellampe #gammel lampe
+      entity_id: light.stuegammellampe
   - service: switch.turn_on
     data:
       entity_id: switch.stua_fancy_lampe
   - service: switch.turn_on
     data:
       entity_id: switch.lys_over_spisebordet
+'1588528424528':
+  alias: WilliamRødtLys
+  sequence:
+  - brightness_pct: 100
+    device_id: 87c434c4ef804a789f0029a15f05daff
+    domain: light
+    entity_id: light.williamfargelys
+    type: turn_on
+  - delay: '2'
+  - device_id: 87c434c4ef804a789f0029a15f05daff
+    domain: light
+    entity_id: light.williamfargelys
+    type: turn_off
+'1588528473512':
+  alias: Nytt skript
+  sequence:
+  - device_id: 87c434c4ef804a789f0029a15f05daff
+    domain: light
+    entity_id: light.williamfargelys
+    type: turn_off
+'1591568133861':
+  alias: testscript
+  sequence:
+  - device_id: c936f1e6da6e4bf3b63922aa0b8878aa
+    domain: light
+    entity_id: light.lys_bad_1
+    type: turn_off

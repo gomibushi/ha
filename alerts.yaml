@@ -1,0 +1,94 @@
+  vannsensorkjokken:
+    name: Vannlekkasje kjøkken
+    entity_id: binary_sensor.vannlekkasjekjokken
+    state: 'on'   # Optional, 'on' is the default value
+    repeat: 3
+    can_acknowledge: true  # Optional, default is true
+    skip_first: false  # Optional, false is the default
+    message: Vannlekkasje på kjøkkenet!
+    done_message: Vannet er borte!
+    data:
+      push:
+        sound:
+          name: "US-EN-Alexa-Water-Detected-Generic.wav"
+          critical: 1
+          volume: 1.0
+    notifiers:
+      - mobile_app_pal_s_iphone_11
+      - mobile_app_jannicke_sin_iphone
+
+  roykvarsler_2etg_tvstue:
+    name: Røykvarsler TV-Stue
+    entity_id: binary_sensor.roykvarslertvstue
+    state: 'on'   # Optional, 'on' is the default value
+    repeat: 1
+    can_acknowledge: true  # Optional, default is true
+    skip_first: false  # Optional, false is the default
+    message: BRANN! Røyk i andre etasje!
+    done_message: Faren over - Ingen røyk i andre etasje lenger!
+    data:
+      push:
+        sound:
+          name: "US-EN-Alexa-Smoke-Detected-Generic.wav"
+          critical: 1
+          volume: 1.0
+    notifiers:
+      - mobile_app_pal_s_iphone_11
+      - mobile_app_jannicke_sin_iphone
+
+  roykvarsler_1etg_stue:
+    name: Røykvarsler første etg
+    entity_id: binary_sensor.roykvarslerstue
+    state: 'on'   # Optional, 'on' is the default value
+    repeat: 1
+    can_acknowledge: true  # Optional, default is true
+    skip_first: false  # Optional, false is the default
+    message: BRANN! Røyk i første etasje!
+    done_message: Faren over - Ingen røyk i første etasje lenger!
+    data:
+      push:
+        sound:
+          name: "US-EN-Alexa-Smoke-Detected-Generic.wav"
+          critical: 1
+          volume: 1.0
+    notifiers:
+      - mobile_app_pal_s_iphone_11
+      - mobile_app_jannicke_sin_iphone
+  
+  roykvarsler_kjeller:
+    name: Røykvarsler kjeller
+    entity_id: binary_sensor.roykvarslerkjeller
+    state: 'on'   # Optional, 'on' is the default value
+    repeat: 1
+    can_acknowledge: true  # Optional, default is true
+    skip_first: false  # Optional, false is the default
+    message: BRANN! Røyk i kjelleren!
+    done_message: Faren over - Ingen røyk i kjelleren lenger!
+    data:
+      push:
+        sound:
+          name: "US-EN-Alexa-Smoke-Detected-Generic.wav"
+          critical: 1
+          volume: 1.0
+    notifiers:
+      - mobile_app_pal_s_iphone_11
+      - mobile_app_jannicke_sin_iphone
+
+  roykvarsler_williamsrom:
+    name: Røykvarsler Williams Rom
+    entity_id: binary_sensor.roykvarslerwilliamsrom
+    state: 'on'   # Optional, 'on' is the default value
+    repeat: 1
+    can_acknowledge: true  # Optional, default is true
+    skip_first: false  # Optional, false is the default
+    message: BRANN! Røyk i Williams Rom!
+    done_message: Faren over - Ingen røyk i Williams rom lenger!
+    data:
+      push:
+        sound:
+          name: "US-EN-Alexa-Smoke-Detected-Generic.wav"
+          critical: 1
+          volume: 1.0
+    notifiers:
+      - mobile_app_pal_s_iphone_11
+      - mobile_app_jannicke_sin_iphone

@@ -131,3 +131,10 @@
     ignore_availability: true
     name: Week Numbers
     track: true
+
+- cal_id: t2t4iof5i83541s33d1kkliano@group.calendar.google.com
+  entities:
+  - device_id: williampal
+    ignore_availability: true
+    name: "WilliamP\xE5l"
+    track: true

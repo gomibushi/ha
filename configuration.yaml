@@ -11,6 +11,7 @@ config:
 logger:
   default: info
 frontend:
+  themes: !include_dir_merge_named themes
 mobile_app:
 hassio:
 updater:
@@ -21,8 +22,8 @@ sun:
 system_health:
 cloud:
 stream: #for camera record etc - maybe remove
+
 # CUSTOM MODULES
-nissan_leaf: !include leaf.yaml
 asuswrt: !include asuswrt.yaml
 tellduslive:
 google:
@@ -33,18 +34,12 @@ google:
 camera: !include cameras.yaml
 zone: !include zones.yaml
 group: !include groups.yaml
-light: !include lights.yaml
-script: !include scripts.yaml
 scene: !include scenes.yaml
+alert: !include alerts.yaml
+light: !include lights.yaml
+input_boolean: !include input_boolean.yaml
 
-#customize: !include customize.yaml
-
-sensor: !include_dir_merge_list sensors/ 
-alert: !include_dir_merge_list alerts
+sensor: !include_dir_merge_list sensors/
 binary_sensor: !include_dir_merge_list binary_sensors/
 automation: !include_dir_merge_list automations/
-
-#automation: !include automations.yaml
-#alert: !include alerts.yaml
-#binary_sensor: !include binary_sensors.yaml
-#sensor: !include sensors.yaml
+script: !include_dir_merge_list script/

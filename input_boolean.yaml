@@ -1,0 +1,4 @@
+leaf_repeat:
+  name: Leaf Repeat
+  initial: off
+  icon: mdi:leaf
