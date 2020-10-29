@@ -1,0 +1,15 @@
+- alias: "Notify if Zwave Device Offline"
+  initial_state: true
+  trigger:
+    - platform: state
+      entity_id:
+        - zwave.aeon_labs_zw090_z_stick_gen5_eu
+      from: 'home'
+      to: 'not_home'
+      for:
+        seconds: 60
+  action:
+    service: notify.mobile_app_pal_s_iphone_11
+    data_template:
+      title: "Zwave is offline"
+      message: "{{ trigger.to_state.attributes.friendly_name }} is offline"

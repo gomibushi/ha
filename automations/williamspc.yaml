@@ -1,5 +1,5 @@
 - alias: William slår på PCen
-  initial_state: 'on'
+  initial_state: true
   trigger:
     platform: state
     entity_id: binary_sensor.williamspc
@@ -17,7 +17,7 @@
         }} timer i dag.
 
 - alias: William slår av PCen
-  initial_state: 'on'
+  initial_state: true
   trigger:
     platform: state
     entity_id: binary_sensor.williamspc

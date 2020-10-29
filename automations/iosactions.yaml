@@ -1,0 +1,32 @@
+- alias: SceneNatt
+  initial_state: true
+  trigger:
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: SceneNatt
+  action:
+    service: scene.turn_on
+    entity_id: scene.nattmodus
+
+- alias: SceneDag
+  initial_state: true
+  trigger:
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: SceneDag
+  action:
+    service: scene.turn_on
+    entity_id: scene.dagmodus
+
+- alias: Start Leaf Climate Control
+  initial_state: true
+  trigger:
+  - platform: event
+    event_type: ios.action_fired
+    event_data:
+      actionName: leafheat
+  action:
+    service: switch.turn_on
+    entity_id: switch.leafen_climate_control

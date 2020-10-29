@@ -1,21 +1,77 @@
-  - platform: template
-    sensors:
-      vannlekkasjekjokken:
-        friendly_name: 'Vannlekkasje på kjøkkenet'
-        value_template: >- 
-          {%- if states("sensor.vannsensor_kjokken_flood") | int == 2 -%}
-          true
-          {%- else -%}
-          false
-          {%- endif -%}
+- platform: template
+  sensors:
+    vannlekkasjekjokken:
+      friendly_name: "Vannlekkasje på kjøkkenet"
+      value_template: >-
+        {%- if states("sensor.vannsensor_kjokken_flood") | int == 2 -%}
+        true
+        {%- else -%}
+        false
+        {%- endif -%}
 
-  - platform: template
-    sensors:
-      roykvarslergang2etg:
-        friendly_name: 'Røykvarsler gang 2. etg'
-        value_template: >- 
-          {%- if states("sensor.roykvarsler_2etggang_smoke") | int == 3 -%}
-          true
-          {%- else -%}
-          false
-          {%- endif -%}
+- platform: template
+  sensors:
+    roykvarslertvstue:
+      friendly_name: "Røykvarsler TV-Stue 2. etg"
+      value_template: >-
+        {%- if states("sensor.roykvarsler_2etggang_smoke") | int == 3 -%}
+        true
+        {%- else -%}
+        false
+        {%- endif -%}
+
+- platform: template
+  sensors:
+    roykvarslerstue:
+      friendly_name: "Røykvarsler stue 1. etg"
+      value_template: >-
+        {%- if states("sensor.roykvarsler_1etg_stue_smoke_3") | int == 3 -%}
+        true
+        {%- else -%}
+        false
+        {%- endif -%}
+
+- platform: template
+  sensors:
+    roykvarslerkjeller:
+      friendly_name: "Røykvarsler kjeller"
+      value_template: >-
+        {%- if states("sensor.roykvarsler_kjeller_smoke") | int == 3 -%}
+        true
+        {%- else -%}
+        false
+        {%- endif -%}
+
+- platform: template
+  sensors:
+    roykvarslerwilliamsrom:
+      friendly_name: "Røykvarsler Williams Rom"
+      value_template: >-
+        {%- if states("sensor.roykvarsler_williamsrom_smoke_5") | int == 3 -%}
+        true
+        {%- else -%}
+        false
+        {%- endif -%}
+# Current Steam game (William)
+- platform: template
+  sensors:
+    steam_game_william:
+      friendly_name: "Steam Game William"
+      value_template: "{{ states.sensor.76561198799039909.attributes.game }}"
+
+# Current Steam game (account 2)
+- platform: template
+  sensors:
+    steam_game_pal:
+      friendly_name: "Steam Game Pål"
+      value_template: "{{ states.sensor.76561197970426242.attributes.game }}"
+- platform: template
+  sensors:
+    charger_power_plug_on:
+      friendly_name: "Bil-lader på"
+      value_template: >-
+        {%- if states("sensor.fibaro_wallplug_carcharge_power") | float > 1 -%}
+        true
+        {%- else -%}
+        false
+        {%- endif -%}

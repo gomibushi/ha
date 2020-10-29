@@ -1,0 +1,12 @@
+- platform: template
+  sensors:
+    electricity_full_price_hour:
+      value_template: "{{((states('sensor.real_time_consumption_lyngvegen_13_b') | float / 1000) * (states('sensor.electricity_price_lyngvegen_13_b') | float + states('sensor.electricity_nettleieboligenergipris_perkwh') | float) + states('sensor.electricity_nettleieboligfastpris_perhour') | float) | round(2) }}"
+- platform: template
+  sensors:
+    electricity_full_price_day:
+      value_template: "{{(((states('sensor.real_time_consumption_lyngvegen_13_b') | float / 1000) * (states('sensor.electricity_price_lyngvegen_13_b') | float + states('sensor.electricity_nettleieboligenergipris_perkwh') | float) + states('sensor.electricity_nettleieboligfastpris_perhour') | float) * 24 ) | round(2) }}"
+- platform: template
+  sensors:
+    electricity_price_level_no:
+      value_template: "{% if state_attr('sensor.electricity_price_lyngvegen_13_b', 'price_level') == 'EXPENSIVE' %} Dyrt {% elif state_attr('sensor.electricity_price_lyngvegen_13_b', 'price_level') == 'CHEAP' %} Billig {% elif state_attr('sensor.electricity_price_lyngvegen_13_b', 'price_level') == 'NORMAL' %} Normalt {% elif state_attr('sensor.electricity_price_lyngvegen_13_b', 'price_level') == 'VERY EXPENSIVE' %} Veldig dyrt {% elif state_attr('sensor.electricity_price_lyngvegen_13_b', 'price_level') == 'VERY CHEAP' %} Veldig billig {% endif %}"

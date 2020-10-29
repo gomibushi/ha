@@ -1,0 +1,10 @@
+- platform: scrape
+  name: electricity_nettleieboligfastpris_perhour
+  resource: https://ts.tensio.no/kunde/nettleie-priser-og-avtaler
+  select: "strong:nth-of-type(5)"
+  value_template: '{{value | regex_findall_index(find="\d{2,4},\d{2,4}", index=0, ignorecase=True) | regex_replace(find=",", replace=".", ignorecase=False) | float / 8760 | round(2) }}'
+- platform: scrape
+  name: electricity_nettleieboligenergipris_perkwh
+  resource: https://ts.tensio.no/kunde/nettleie-priser-og-avtaler
+  select: "strong:nth-of-type(6)"
+  value_template: '{{value | regex_findall_index(find="\d{2,4},\d{2,4}", index=0, ignorecase=True) | regex_replace(find=",", replace=".", ignorecase=False) | float / 100 }}'

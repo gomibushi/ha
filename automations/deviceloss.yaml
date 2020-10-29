@@ -1,0 +1,15 @@
+- alias: Charge Plug gone
+  initial_state: true
+  trigger:
+    platform: state
+    entity_id: sensor.charger_power_plug_on
+    to: "off"
+  action:
+    - service: notify.mobile_app_pal_s_iphone_11
+      data_template:
+        title: Bil lader av/sikring gått
+        message: Z-Wave-pluggen er slått av eller sikringen er gått.
+  #- service: notify.mobile_app_jannicke_sin_iphone
+  #  data_template:
+  #    title: Bil lader av/sikring gått
+  #    message: Z-Wave-pluggen er slått av eller sikringen er gått.

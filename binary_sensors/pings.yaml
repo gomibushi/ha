@@ -1,70 +1,75 @@
-  - platform: ping
-    name: palspc
-    host: 192.168.10.90
-    count: 2
-    scan_interval: 30
-  - platform: ping
-    name: williamspc
-    host: 192.168.10.91
-    count: 2
-    scan_interval: 30
-  - platform: ping
-    name: laptopny
-    host: 192.168.10.235
-    count: 2
-    scan_interval: 30
-  - platform: ping
-    name: server
-    host: 192.168.10.6
-    count: 2
-    scan_interval: 30
-  - platform: ping
-    name: xboxone
-    host: 192.168.10.112
-    count: 2
-    scan_interval: 30
-  - platform: ping
-    name: ikeatradfri
-    host: 192.168.10.101
-    count: 2
-    scan_interval: 30
-  - platform: ping
-    name: samsungtv
-    host: 192.168.10.254
-    count: 2
-    scan_interval: 30
-  - platform: ping
-    name: asusrouter
-    host: 192.168.10.2
-    count: 2
-    scan_interval: 30
-  - platform: ping
-    name: dlinkcam_frontdoor
-    host: 192.168.10.120
-    count: 2
-    scan_interval: 30
-  - platform: ping
-    name: dlinkcam_coop
-    host: 192.168.10.121
-    count: 2
-    scan_interval: 30
-  - platform: ping
-    name: nintendoswitch
-    host: 192.168.10.141
-    count: 2
-    scan_interval: 30
-  - platform: ping
-    name: jannicke_applewatch
-    host: 192.168.10.122
-    count: 2
-    scan_interval: 30
-  - platform: ping
-    name: pal_applewatch
-    host: 192.168.10.143
-    count: 2
-    scan_interval: 30
-  - platform: ping
-    name: pal_ipad
-    host: 192.168.10.190
-    count: 2
-    scan_interval: 30
+- platform: ping
+  name: palspc
+  host: 192.168.10.75
+  count: 2
+  scan_interval: 30
+- platform: ping
+  name: adguardserver
+  host: 192.168.10.201
+  count: 2
+  scan_interval: 30
+- platform: ping
+  name: williamspc
+  host: 192.168.10.91
+  count: 2
+  scan_interval: 30
+- platform: ping
+  name: laptopny
+  host: 192.168.10.235
+  count: 2
+  scan_interval: 30
+- platform: ping
+  name: server
+  host: 192.168.10.6
+  count: 2
+  scan_interval: 30
+- platform: ping
+  name: xboxone
+  host: 192.168.10.112
+  count: 2
+  scan_interval: 30
+- platform: ping
+  name: ikeatradfri
+  host: 192.168.10.101
+  count: 2
+  scan_interval: 30
+- platform: ping
+  name: samsungtv
+  host: 192.168.10.254
+  count: 2
+  scan_interval: 30
+- platform: ping
+  name: asusrouter
+  host: 192.168.10.2
+  count: 2
+  scan_interval: 30
+- platform: ping
+  name: dlinkcam_frontdoor
+  host: 192.168.10.120
+  count: 2
+  scan_interval: 30
+- platform: ping
+  name: dlinkcam_coop
+  host: 192.168.10.121
+  count: 2
+  scan_interval: 30
+- platform: ping
+  name: nintendoswitch
+  host: 192.168.10.141
+  count: 2
+  scan_interval: 30
+- platform: ping
+  name: jannicke_applewatch
+  host: 192.168.10.122
+  count: 2
+  scan_interval: 30
+- platform: ping
+  name: pal_applewatch
+  host: 192.168.10.143
+  count: 2
+  scan_interval: 30
+- platform: ping
+  name: pal_ipad
+  host: 192.168.10.190
+  count: 2
+  scan_interval: 30
